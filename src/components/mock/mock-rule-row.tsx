@@ -138,7 +138,7 @@ export const AddRuleRow = styled((p: {
     </RowContainer>
 )`
     > svg {
-        margin: 0 5px;
+        margin: 0 10px;
     }
 
     margin-top: 20px;
