@@ -15,6 +15,7 @@ import { ExistingTerminalCustomUi } from "../../components/intercept/config/exis
 import { ElectronCustomUi } from '../../components/intercept/config/electron-config';
 import { AndroidDeviceCustomUi } from "../../components/intercept/config/android-device-config";
 import { AndroidAdbCustomUi } from "../../components/intercept/config/android-adb-config";
+import { AndroidFridaCustomUi } from "../../components/intercept/config/android-frida-config";
 import { ExistingBrowserCustomUi } from "../../components/intercept/config/existing-browser-config";
 import { JvmCustomUi } from "../../components/intercept/config/jvm-config";
 import { DockerAttachCustomUi } from "../../components/intercept/config/docker-attach-config";
@@ -252,6 +253,28 @@ const INTERCEPT_OPTIONS: _.Dictionary<InterceptorConfig> = {
         },
         clientOnly: true,
         uiConfig: AndroidDeviceCustomUi,
+        tags: [...MOBILE_TAGS, ...ANDROID_TAGS]
+    },
+    'android-frida': {
+        name: 'Android App via Frida',
+        description: [
+            'Intercept a target Android app on any rooted device, using ' +
+            'Frida to automatically disable certificate pinning'
+        ],
+        iconProps: recoloured(androidInterceptIconProps, '#ef6456'),
+
+        uiConfig: AndroidFridaCustomUi,
+        tags: [...MOBILE_TAGS, ...ANDROID_TAGS]
+    },
+    'ios-frida': {
+        name: 'iOS App via Frida',
+        description: [
+            'Intercept a target iOS app on any jailbroken device, using ' +
+            'Frida to automatically disable certificate pinning'
+        ],
+        iconProps: recoloured(SourceIcons.iOS, '#ef6456'),
+
+        uiConfig: AndroidFridaCustomUi,
         tags: [...MOBILE_TAGS, ...ANDROID_TAGS]
     },
     'manual-ios-device': {
