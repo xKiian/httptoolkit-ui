@@ -19,7 +19,7 @@ import {
 } from '../../types';
 
 import {
-    getSummaryColour,
+    getSummaryColor,
     EventCategory,
     describeEventCategory
 } from '../../model/events/categorization';
@@ -121,7 +121,7 @@ const RowPin = styled(
 
 const RowMarker = styled(Column)`
     transition: color 0.2s;
-    color: ${(p: { category: EventCategory }) => getSummaryColour(p.category)};
+    color: ${(p: { category: EventCategory }) => getSummaryColor(p.category)};
 
     background-color: currentColor;
 
@@ -468,7 +468,7 @@ const ExchangeRow = inject('uiStore')(observer(({
                         : 'multi-step'
                     } rule`}
                     icon={['fas', 'theater-masks']}
-                    color={getSummaryColour('mutative')}
+                    color={getSummaryColor('mutative')}
                     fixedWidth={true}
                 />
             }
