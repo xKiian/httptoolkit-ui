@@ -1,7 +1,7 @@
 import * as _ from 'lodash';
 import * as React from 'react';
 
-import { styled, css } from '../../styles';
+import { styled } from '../../styles';
 import { IconProp } from '../../icons';
 
 import { IconButton } from '../common/icon-button';
@@ -47,7 +47,7 @@ export const IconMenuButton = styled(React.memo((p: {
 
     :not(:disabled) {
         cursor: pointer;
-        color: ${p => p.theme.primaryInputBackground};
+        color: ${p => p.theme.secondaryInputColor};
 
         &:hover, &:focus {
             outline: none;

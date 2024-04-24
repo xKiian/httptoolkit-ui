@@ -281,7 +281,7 @@ const BodyContainer = styled.div`
         margin-top: 5px;
         border-radius: 4px;
         border: solid 1px ${p => p.theme.containerBorder};
-        padding: 1px;
+        padding-right: 1px;
     }
 `;
 
